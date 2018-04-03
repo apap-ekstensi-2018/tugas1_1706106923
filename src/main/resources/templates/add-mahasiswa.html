@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- <title th:replace="fragments/header :: header(title=${title})"></title> -->
+<!-- <title>Add student</title> -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<div th:replace="fragments/fragment :: header"></div>
+	<h1 class="page-header">Tambah Mahasiswa</h1>
+
+	<form action="/mahasiswa/tambah/submit"  method="post" >
+		<table style="width:75%">
+  			<tr>
+    				<th>Nama Lengkap</th>
+  			</tr>
+  			<tr>
+    				<td><input type="text" size="45" name="nama" /></td>
+  			</tr>
+  			<tr>
+    				<th>Tempat Lahir</th>
+  			</tr>
+  			<tr>
+    				<td><input type="text" size="45" name="tempat_lahir" /></td>
+  			</tr>
+  			<tr>
+    				<th>Tanggal Lahir</th>
+  			</tr>
+  			<tr>
+    				<td><input type="text" size="45" name="tanggal_lahir" /></td>
+  			</tr>
+  			<tr>
+    				<th>Jenis Kelamin</th>
+  			</tr>
+  			<tr>
+    				<td>
+    				<select name="jenis_kelamin">
+    				<option value="0">Laki-Laki</option>
+    				<option value="1">Perempuan</option>
+    				</select>
+    				</td>
+  			</tr>
+  			<tr>
+    				<th>Agama</th>
+  			</tr>
+  			<tr>
+    				<td>
+    				<select name="agama">
+    				<option value="Islam">Islam</option>
+    				<option value="Protestan">Protestan</option>
+    				<option value="Katholik">Katholik</option>
+    				<option value="Budha">Budha</option>
+    				<option value="Hindu">Hindu</option>
+    				</select>
+    				</td>
+  			</tr>
+  			<tr>
+    				<th>Golongan Darah</th>
+  			</tr>
+  			<tr>
+    				<td>
+    				<select name="golongan_darah">
+    				<option value="A">A</option>
+    				<option value="B">B</option>
+    				<option value="AB">AB</option>
+    				<option value="O">O</option>
+    				</select>
+    				</td>
+  			</tr>
+  			<tr>
+    				<th>Tahun Masuk</th>
+  			</tr>
+  			<tr>
+    				<td><input type="text" size="45" name="tahun_masuk" /></td>
+  			</tr>
+  			<tr>
+    				<th>Jalur Masuk</th>
+  			</tr>
+  			<tr>
+    				<td>
+    				<select name="jalur_masuk">
+    				<option value="Undangan Olimpiade">Undangan Olimpiade</option>
+    				<option value="SBMPTN">SBMPTN</option>
+    				</select>
+    				</td>
+  			</tr>
+  			<tr>
+    				<th>Id Program Studi</th>
+  			</tr>
+  			<tr>
+    				<td><input type="text" size="45" name="id_prodi" /></td>
+  			</tr>
+ 		</table>
+
+		<div>
+			<button type="submit" name="action" value="save">Save</button>
+		</div>
+	
+	</form>
+
+</body>
+
+</html>
+

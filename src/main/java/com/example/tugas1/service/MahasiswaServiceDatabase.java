@@ -18,4 +18,22 @@ public class MahasiswaServiceDatabase implements MahasiswaService{
 		log.info ("Lihat data mahasiswa dengan NPM : {}", npm);
 			return mhsMapper.selectMahasiswa(npm);
 	}
+	@Override
+	public void addMahasiswa(MahasiswaModel mahasiswa) {
+		//log.info ("insert student with nomor {}", mahasiswa.getNomor());
+		mhsMapper.addMahasiswa(mahasiswa);
+	}
+    
+    @Override
+    public void updateMahasiswa (MahasiswaModel mahasiswa)
+    {
+    		log.info("mahasiswa " + mahasiswa.getNpm() + " updated");
+    		mhsMapper.updateMahasiswa(mahasiswa);
+    }
+
+    @Override
+    public MahasiswaModel selectMahasiswaByNpm (String npm) {
+    		log.info("select mahasiswa by npm");
+    		return  mhsMapper.selectMahasiswaByNpm(npm);
+    }
 }

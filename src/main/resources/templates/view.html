@@ -4,18 +4,59 @@
         <title>Lihat Data Mahasiswa Berdasarkan NPM</title>
     </head>
     <body>
-       	<h3 th:text="'NPM :' + ${mahasiswa.npm}">NPM Mahasiswa</h3>
-       	<h3 th:text="'Nama :' + ${mahasiswa.nama}">Nama Mahasiswa</h3>
-       	<h3 th:text="'Tempat' + ${mahasiswa.tempat_lahir} + '/Tanggal Lahir :' + ${mahasiswa.tanggal_lahir}">Tempat/Tanggal Lahir Mahasiswa</h3>
-       	<h3 th:text="'Program Studi :' + ${mahasiswa.nama_prodi}">Program Studi Mahasiswa</h3>
-       	<h3 th:text="'Fakultas :' + ${mahasiswa.nama_fakultas}">Fakultas Mahasiswa</h3>
-       	<h3 th:text="'Universitas :' + ${mahasiswa.nama_univ}">Universitas Mahasiswa</h3>
-       	<h3 th:text="'Jenis Kelamin :' + ${mahasiswa.jenis_kelamin}">Jenis Kelamin Mahasiswa</h3>
-       	<h3 th:text="'Agama :' + ${mahasiswa.agama}">Agama Mahasiswa</h3>
-       	<h3 th:text="'Golongan Darah :' + ${mahasiswa.golongan_darah}">Golongan Darah Mahasiswa</h3>
-       	<h3 th:text="'Tahun Masuk :' + ${mahasiswa.tahun_masuk}">Tahun Masuk Mahasiswa</h3>
-       	<h3 th:text="'Jalur Masuk :' + ${mahasiswa.jalur_masuk}">Jalur Masuk Mahasiswa</h3>
-       	<h3 th:text="'Status :' + ${mahasiswa.status}">Status Mahasiswa</h3>
+    <div th:replace="fragments/fragment :: header"></div>
+    <h3 th:text="'Lihat Data Mahasiswa - ' + ${mahasiswa.npm}">NPM Mahasiswa</h3>
+   		<table style="width:50%">
+  			<tr>
+    				<th>NPM</th>
+   				 <td th:text="${mahasiswa.npm}">NPM Mahasiswa</td>
+  			</tr>
+ 			 <tr>
+    				<th>Nama</th>
+   				 <td th:text="${mahasiswa.nama}">Nama Mahasiswa</td>
+  			</tr>
+  			<tr>
+    				<th>Tempat/Tanggal Lahir</th>
+   				 <td th:text="${mahasiswa.tempat_lahir}+' ' + ${mahasiswa.tanggal_lahir}">Tempat/Tanggal Lahir Mahasiswa</td>
+  			</tr>
+ 			<tr>
+    				<th>Program Studi</th>
+   				 <td th:text="${mahasiswa.nama_prodi}">Program Studi Mahasiswa</td>
+  			</tr>
+  			<tr>
+    				<th>Fakultas</th>
+   				 <td th:text="${mahasiswa.nama_fakultas}">Nama Fakultas Mahasiswa</td>
+  			</tr>
+  			<tr>
+    				<th>Universitas</th>
+   				 <td th:text="${mahasiswa.nama_univ}">Nama Univ Mahasiswa</td>
+  			</tr>
+  			<tr>
+    				<th>Jenis Kelamin</th>
+   				 <td th:text="${mahasiswa.jenis_kelamin}">Jenis Kelamin Mahasiswa</td>
+  			</tr>
+  			<tr>
+    				<th>Agama</th>
+   				 <td th:text="${mahasiswa.agama}">Agama Mahasiswa</td>
+  			</tr>
+  			<tr>
+    				<th>Golongan Darah</th>
+   				 <td th:text="${mahasiswa.golongan_darah}">Golongan Darah Mahasiswa</td>
+  			</tr>
+  			<tr>
+    				<th>Tahun Masuk</th>
+   				 <td th:text="${mahasiswa.tahun_masuk}">Tahun Masuk Mahasiswa</td>
+  			</tr>
+  			<tr>
+    				<th>Jalur Masuk</th>
+   				 <td th:text="${mahasiswa.jalur_masuk}">Jalur Masuk Mahasiswa</td>
+  			</tr>
+  			<tr>
+    				<th>Status</th>
+   				 <td th:text="${mahasiswa.status}">Status Mahasiswa</td>
+  			</tr>
+ 		</table>
+
 
     </body>
 </html>
